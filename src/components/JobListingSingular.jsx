@@ -17,7 +17,8 @@ const JobListingSingular = ({ job }) => {
                     <h3 className="text-xl font-bold">{ job.title }</h3>
                 </div>
                 <div className="mb-5">{description}</div>
-                <button onClick={() => setShowFullDescription((prevState) => !prevState)} className='text-indigo-500 mb-5 hover:text-indigo-600'>{showFullDescription ? 'Less' : 'More'}</button>
+                <button onClick={() => setShowFullDescription((prevState) => !prevState)} 
+                className='text-indigo-500 mb-5 hover:text-indigo-600'>{showFullDescription ? 'Less' : 'More'}</button>
 
                 <h3 className="text-indigo-500 mb-2">{ job.salary }</h3>
 
@@ -29,7 +30,7 @@ const JobListingSingular = ({ job }) => {
                     { job.location }
                     </div>
                     <Link
-                    to={`/job/${job.id}`} className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm">
+                    to={`/jobs/${job.id}`} className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm">
                     Read More
                     </Link>
                 </div>
